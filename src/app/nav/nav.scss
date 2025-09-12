@@ -1,0 +1,23 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  z-index: 10;
+
+  .nav-link {
+    flex-grow: 1;
+    color: var(--dark-color);
+    border-radius: 0.5rem;
+    border: 1.25px solid var(--dark-color);
+    background: linear-gradient(0deg, #f1e8d2 0%, #e2c5a3 50%, #d39f70 100%);
+    box-shadow: 4px 4px 10px 0px rgba(54, 44, 39, 0.25);
+    text-align: center;
+    font-weight: 600;
+    padding-block: 0.75rem;
+  }
+}

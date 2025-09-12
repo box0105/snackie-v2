@@ -1,0 +1,13 @@
+.my-btn {
+  border-radius: var(--btn-radius);
+  border: 1.6px solid var(--dark-color);
+  background: var(--main-color);
+  padding: 0.625rem 1.25rem;
+  font-weight: 700;
+
+  &:hover,
+  &:active {
+    background-color: var(--main-color);
+    border-color: var(--dark-color);
+  }
+}

@@ -1,0 +1,22 @@
+<div class="pick-history text-center py-5">
+  <h2 class="dancingFont">History</h2>
+
+  <swiper-container
+    slides-per-view="2"
+    space-between="12"
+    speed="5000"
+    autoplay="true"
+    free-mode="true"
+    loop="true"
+   
+    [autoplay]="autoplayConfig"
+  >
+    @for (img of imgs; track $index) {
+    <swiper-slide>
+      <img
+        [src]="`/images/${img}`"
+        [alt]="img"
+    /></swiper-slide>
+    }
+  </swiper-container>
+</div>

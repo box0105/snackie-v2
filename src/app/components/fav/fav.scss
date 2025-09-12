@@ -1,0 +1,25 @@
+.fork-btn {
+  background-color: var(--blue-color);
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  transition: all 0.25s ease;
+  opacity: 0.9;
+  padding: 4px 6px;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  color: #333333;
+
+  &.active {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &:active {
+    border: 2px solid #fff;
+    background-color: #2085b0;
+    transition: transform 0.2s;
+
+    &:active {
+      transform: scale(1.05);
+    }
+  }
+}

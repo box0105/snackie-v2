@@ -1,0 +1,20 @@
+@if(isShowTodaySpecial()) {
+<app-today-special (btnClicked)="showTodaySpecial()"></app-today-special>
+} @else {
+<app-header></app-header>
+<app-pick-history></app-pick-history>
+
+<main>
+  <div class="boxPicker">
+    <img
+      class="mb-4"
+      src="/images/box.png"
+      alt="pick today's food"
+      width="160"
+      height="160"
+    />
+    <app-btn text="決定今天的一餐!" (btnClicked)="showTodaySpecial()"></app-btn>
+  </div>
+</main>
+
+}

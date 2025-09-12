@@ -1,0 +1,18 @@
+.today-quote {
+  border: 1px solid var(--dark-color);
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+
+  .quote {
+    font-size: 12px;
+  }
+}
+
+.today-special {
+  cursor: grab;
+}
+
+.today-special h2 {
+  margin-bottom: 1.25rem;
+}
+

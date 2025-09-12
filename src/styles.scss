@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+:root {
+  --main-color: #d39f70;
+  --sub-color: #f1e8d2;
+  --bg-color: #f7f5f1;
+  --nav-color: linear-gradient(0deg, #f1e8d2 0%, #e2c5a3 50%, #d39f70 100%);
+  --dark-color: #362c27;
+  --grey-color: #aaa;
+  --orange-color: #d8642c;
+  --blue-color: #47819a;
+  --btn-radius: 0.625rem;
+  --border-radius: 0.75rem;
+  // bootstrap
+  --bs-secondary-color: #aaa;
+}
+
+.dancingFont {
+  // fw 400-700
+  font-family: "Dancing Script", cursive;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+}
+
+.card,
+.card-img-top {
+  border-radius: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.card-title {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 36px !important; 
+  font-weight: 500;
+}
+
+a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+main {
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+}

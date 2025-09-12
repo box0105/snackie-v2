@@ -1,0 +1,29 @@
+.prop {
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:active {
+    transform: scale(1.4);
+  }
+}
+
+.wetProp {
+  color: rgb(0, 100, 100);
+  &.active {
+    color: rgb(0, 200, 200);
+  }
+}
+
+.meatProp {
+  color: rgb(100, 30, 0);
+  &.active {
+    color: rgb(200, 60, 0);
+  }
+}
+
+.moneyProp {
+  color: rgb(30, 100, 0);
+  &.active {
+    color: rgb(60, 200, 0);
+  }
+}
