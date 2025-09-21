@@ -22,7 +22,7 @@ export class FoodyDetail implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
       const id = Number(params.get('id'));
-      if (!isNaN(id)) this.FoodService.setCurrId(id);
+      this.FoodService.setCurrId(id);
     });
   }
 }

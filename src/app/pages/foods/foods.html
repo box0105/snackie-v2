@@ -1,6 +1,23 @@
-<app-header></app-header>
+<main>
+  <!-- panels -->
+  <div class="buttons-bar d-flex flex-column gap-4 mb-5">
+    <div class="d-flex gap-4">
+      <button class="btn btn-add" routerLink="/foods/add">Add</button>
+      <button class="btn btn-add">Filter</button>
+    </div>
 
-<main class="px-3">
+    <div class="input-group search-group d-flex w-100">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search"
+        (keyup.enter)="onSearch()"
+      />
+      <button class="btn btn-search" (click)="onSearch()">放大鏡</button>
+    </div>
+  </div>
+
+  <!-- food cards -->
   <div class="row row-cols-2 justify-content-between gx-2 gy-3">
     @for (food of foodService.foods(); track $index) {
     <div class="col">

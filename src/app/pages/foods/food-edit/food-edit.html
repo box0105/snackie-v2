@@ -1,19 +1,22 @@
-<app-header></app-header>
 <main>
   <form [formGroup]="applyForm" (ngSubmit)="onSubmit()" class="food-form">
-    <h2 class="form-title text-center mb-3">Menu</h2>
+    <h2 class="form-title text-center mb-3">
+      Menu @if (isEdit()) { Edit } @else { Add }
+    </h2>
     <div class="form-group">
       <label for="fileUpload">圖片</label>
 
       <!-- fav toggle -->
       <div class="position-relative">
-        <app-fav [isFav]="applyForm.controls['isFav'].value"></app-fav>
+        <app-fav formControlName="isFav"></app-fav>
       </div>
 
       <!-- img preview -->
       <img
-        [src]="previewUrl ?? '/images/' + applyForm.get('img')?.value"
-        alt="food image"
+        [src]="previewUrl ?? (applyForm.get('img')?.value
+          ? `/images/${applyForm.get('img')?.value}` 
+          : '/images/default.jpg')"
+        alt="menu cover"
         class="food-img"
       />
 

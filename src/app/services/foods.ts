@@ -22,9 +22,18 @@ export class FoodService {
     this.currId.set(index + 1);
   }
 
+  create(data: Food) {
+    this.foods.update((list) => {
+      // 取得當前最新 list 的最大 id
+      const maxId = list.length ? Math.max(...list.map((f) => f.id)) : 0;
+      const newFood: Food = { ...data, id: maxId + 1 };
+      return [...list, newFood];
+    });
+  }
+
   update(id: number, data: Partial<Food>) {
-    this.foods.update(list =>
-      list.map(f => f.id === id ? { ...f, ...data } : f)
+    this.foods.update((list) =>
+      list.map((f) => (f.id === id ? { ...f, ...data } : f))
     );
   }
 }

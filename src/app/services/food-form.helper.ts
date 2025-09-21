@@ -1,7 +1,7 @@
 // food-form.helper.ts
 import { Injectable, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Food } from '../../../models/food.model';
+import { Food } from '../models/food.model';
 
 @Injectable({ providedIn: 'root' })
 export class FoodFormHelper {
@@ -13,9 +13,9 @@ export class FoodFormHelper {
       img: [food?.img ?? '', Validators.required],
       quote: [food?.quote ?? '', Validators.required],
       isFav: [food?.isFav ?? false],
-      hydrationRating: [food?.hydrationRating ?? 0],
-      satietyRating: [food?.satietyRating ?? 0],
-      priceRating: [food?.priceRating ?? 0],
+      hydrationRating: [food?.hydrationRating ?? 0,[Validators.required, Validators.min(1), Validators.max(5)]],
+      satietyRating: [food?.satietyRating ?? 0, [Validators.required, Validators.min(1), Validators.max(5)]],
+      priceRating: [food?.priceRating ?? 0, [Validators.required, Validators.min(1), Validators.max(5)]],
     });
   }
 

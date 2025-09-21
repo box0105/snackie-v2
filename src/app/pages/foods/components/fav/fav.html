@@ -1,8 +1,8 @@
 <button
   type="button"
   class="fork-btn position-absolute"
-  [ngClass]="{ active: isFav() }"
-  (click)="toggleFav()"
+  [ngClass]="{ active: value }"
+  (click)="toggle()"
 >
   <i class="fa-solid fa-star"></i>
 </button>
