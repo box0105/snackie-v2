@@ -1,0 +1,34 @@
+<div class="card dash-card position-relative">
+  <img
+    class="card-img-top"
+    [src]="`/images/${this.FoodService.currFood?.img}`"
+    [alt]="this.FoodService.currFood?.name"
+  />
+
+  <div class="card-body">
+    <h3 class="card-title text-center">
+      {{ this.FoodService.currFood?.name }}
+    </h3>
+    <hr class="opacity-75 w-50 mx-auto pb-2" />
+
+    <app-prop
+      title="水分"
+      [initValue]="this.FoodService.currFood?.hydrationRating ?? 5"
+      iconClass="fa-droplet wetProp"
+    ></app-prop>
+
+    <app-prop
+      title="飽食度"
+      [initValue]="this.FoodService.currFood?.satietyRating ?? 5"
+      iconClass="fa-pizza-slice meatProp"
+    ></app-prop>
+
+    <app-prop
+      title="價錢"
+      [initValue]="this.FoodService.currFood?.priceRating ?? 5"
+      iconClass="fa-sack-dollar moneyProp"
+    ></app-prop>
+  </div>
+
+  <app-fav [isFav]="this.FoodService.currFood?.isFav"></app-fav>
+</div>

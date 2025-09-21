@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 
 :root {
   --main-color: #d39f70;
@@ -16,11 +16,6 @@
   --bs-secondary-color: #aaa;
 }
 
-.dancingFont {
-  // fw 400-700
-  font-family: "Dancing Script", cursive;
-}
-
 body {
   background-color: var(--bg-color) !important;
 }
@@ -28,6 +23,15 @@ body {
 .card,
 .card-img-top {
   border-radius: 0;
+}
+
+.dash-card {
+  border: 2px dashed var(--dark-color)!important;
+}
+
+.dancingFont {
+  // fw 400-700
+  font-family: "Dancing Script", cursive;
 }
 
 h1,
@@ -42,16 +46,16 @@ p,
 }
 
 h2 {
-  font-size: 36px !important; 
+  font-size: 36px !important;
   font-weight: 500;
 }
 
 a {
   color: var(--dark-color);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 main {
-  min-height: calc(100vh - 80px);
+  // min-height: calc(100vh - 80px);
   padding: 2rem;
 }

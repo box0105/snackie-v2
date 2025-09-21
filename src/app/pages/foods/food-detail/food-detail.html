@@ -1,0 +1,16 @@
+<main>
+  <section class="today-quote">
+    <h4 class="mb-3 dancingFont">Quote</h4>
+    <p class="quote">
+      {{this.FoodService.currFood?.quote}}
+    </p>
+  </section>
+
+  <section class="today-special">
+    <h2 class="dancingFont text-center">Today&apos;s Special</h2>
+    <app-card></app-card>
+    <div class="d-flex flex-column align-items-center">
+      <app-btn text="再抽一次" (btnClicked)="goToHome()"></app-btn>
+    </div>
+  </section>
+</main>
