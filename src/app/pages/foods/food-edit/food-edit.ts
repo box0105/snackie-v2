@@ -1,8 +1,7 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FoodService } from '../../../services/foods';
-import { Header } from '../../../components/header/header';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Fav } from '../components/fav/fav';
 import { Prop } from '../components/prop/prop';
 import { FoodFormHelper } from '../../../services/food-form.helper';
@@ -11,7 +10,7 @@ import { FoodFormHelper } from '../../../services/food-form.helper';
   selector: 'app-food-edit',
   templateUrl: './food-edit.html',
   styleUrl: './food-edit.scss',
-  imports: [Header, ReactiveFormsModule, Fav, Prop],
+  imports: [ReactiveFormsModule, Fav, Prop, RouterModule],
 })
 export class FoodEdit implements OnInit {
   foodService = inject(FoodService);

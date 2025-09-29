@@ -30,4 +30,9 @@ export const routes: Routes = [
       import('./pages/foods/food-edit/food-edit').then((m) => m.FoodEdit),
     canActivate: [FoodRouteGuard],
   },
+  {
+    path: 'not-found',
+    loadComponent: () =>
+      import('./pages/not-found/not-found').then((m) => m.NotFound),
+  },
 ];

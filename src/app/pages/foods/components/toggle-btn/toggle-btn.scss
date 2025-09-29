@@ -1,0 +1,13 @@
+.toggle-add-btn {
+  position: absolute;
+  top: -14px;
+  right: -21px;
+  background-color: transparent;
+  border: transparent;
+  transition: color 0.18s ease, transform 0.12s ease;
+
+  i {
+    font-size: 1.75rem;
+    color: var(--dark-color);
+  }
+}

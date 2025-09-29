@@ -5,6 +5,7 @@ export interface Food {
   img: string;
   quote: string;
   isFav: boolean;
+  isPicked: boolean;
   hydrationRating: number;
   satietyRating: number;
   priceRating: number;

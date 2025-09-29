@@ -12,6 +12,7 @@ export const MOCK_FOODS: Food[] = [
     hydrationRating: 3,
     satietyRating: 4,
     priceRating: 3,
+    isPicked: false,
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ export const MOCK_FOODS: Food[] = [
     hydrationRating: 2,
     satietyRating: 3,
     priceRating: 4,
+    isPicked: false,
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const MOCK_FOODS: Food[] = [
     hydrationRating: 2,
     satietyRating: 4,
     priceRating: 1,
+    isPicked: false,
   },
   {
     id: 4,
@@ -45,6 +48,7 @@ export const MOCK_FOODS: Food[] = [
     hydrationRating: 3,
     satietyRating: 3,
     priceRating: 5,
+    isPicked: false,
   },
   {
     id: 5,
@@ -56,5 +60,30 @@ export const MOCK_FOODS: Food[] = [
     hydrationRating: 3,
     satietyRating: 4,
     priceRating: 3,
+    isPicked: false,
+  },
+    {
+    id: 6,
+    userId: 1,
+    name: '咖哩飯',
+    img: 'curry.JPEG',
+    quote: '「柔韌的口感，像極了生活裡的韌性。」',
+    isFav: true,
+    hydrationRating: 3,
+    satietyRating: 4,
+    priceRating: 3,
+    isPicked: false,
+  },
+    {
+    id: 7,
+    userId: 1,
+    name: '水餃',
+    img: 'dumpling.JPEG',
+    quote: '「柔韌的口感，像極了生活裡的韌性。」',
+    isFav: true,
+    hydrationRating: 3,
+    satietyRating: 4,
+    priceRating: 3,
+    isPicked: false,
   },
 ];

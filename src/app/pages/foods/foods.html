@@ -2,8 +2,8 @@
   <!-- panels -->
   <div class="buttons-bar d-flex flex-column gap-4 mb-5">
     <div class="d-flex gap-4">
-      <button class="btn btn-add" routerLink="/foods/add">Add</button>
-      <button class="btn btn-add">Filter</button>
+      <button class="btn btn-add">篩選</button>
+      <button class="btn btn-add">排序</button>
     </div>
 
     <div class="input-group search-group d-flex w-100">
@@ -11,17 +11,21 @@
         type="text"
         class="form-control"
         placeholder="Search"
-        (keyup.enter)="onSearch()"
+        [(ngModel)]="this.foodService.searchKeyword"
+        (ngModelChange)="foodService.search()"
       />
-      <button class="btn btn-search" (click)="onSearch()">放大鏡</button>
+      <button class="btn btn-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
     </div>
   </div>
 
   <!-- food cards -->
-  <div class="row row-cols-2 justify-content-between gx-2 gy-3">
-    @for (food of foodService.foods(); track $index) {
+  <div class="foods-cards row row-cols-2 justify-content-between gx-2 gy-3">
+    @for (food of foodService.filterFoods(); track $index) {
     <div class="col">
-      <div class="card h-100 shadow-sm d-flex text-center">
+      <div class="dash-card card h-100 shadow-sm d-flex text-center">
+        <app-toggle-btn [(isPicked)]="food.isPicked"></app-toggle-btn>
         <a [routerLink]="['/foods', food.id, 'edit']">
           <img
             class="card-img-top"

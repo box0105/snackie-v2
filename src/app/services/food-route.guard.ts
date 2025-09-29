@@ -16,11 +16,10 @@ export class FoodRouteGuard implements CanActivate {
 
     this.foodService.setCurrId(id);
     if (!this.foodService.currFood) {
-      this.router.navigate(['/']);
+      this.router.navigate(['/not-found']);
       return false;
     }
 
-    // console.log('valid id', id);
     return true;
   }
 }
