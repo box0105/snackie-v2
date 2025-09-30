@@ -62,7 +62,7 @@ export const MOCK_FOODS: Food[] = [
     priceRating: 3,
     isPicked: false,
   },
-    {
+  {
     id: 6,
     userId: 1,
     name: '咖哩飯',
@@ -74,8 +74,32 @@ export const MOCK_FOODS: Food[] = [
     priceRating: 3,
     isPicked: false,
   },
-    {
+  {
     id: 7,
+    userId: 1,
+    name: '水餃',
+    img: 'dumpling.JPEG',
+    quote: '「柔韌的口感，像極了生活裡的韌性。」',
+    isFav: true,
+    hydrationRating: 3,
+    satietyRating: 4,
+    priceRating: 3,
+    isPicked: false,
+  },
+  {
+    id: 8,
+    userId: 1,
+    name: '水餃',
+    img: 'dumpling.JPEG',
+    quote: '「柔韌的口感，像極了生活裡的韌性。」',
+    isFav: true,
+    hydrationRating: 3,
+    satietyRating: 4,
+    priceRating: 3,
+    isPicked: false,
+  },
+  {
+    id: 9,
     userId: 1,
     name: '水餃',
     img: 'dumpling.JPEG',

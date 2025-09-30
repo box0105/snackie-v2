@@ -1,3 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 65px);
+  padding-bottom: 0;
+  overflow: hidden;
+
+  .foods-cards {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-inline: 5px;
+    padding-bottom: 65px;
+
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+  }
+}
+
 .btn {
   padding: 10px 18px;
   font-weight: bold;
@@ -55,10 +75,6 @@
       transform: scale(0.96);
     }
   }
-}
-
-.foods-cards {
-  padding-bottom: 80px;
 }
 
 .card {

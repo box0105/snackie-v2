@@ -14,6 +14,12 @@
   --border-radius: 0.75rem;
   // bootstrap
   --bs-secondary-color: #aaa;
+  // component set
+  --nav-height: 65px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
