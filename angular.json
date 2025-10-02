@@ -63,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "snakie:build:production"
+              "buildTarget": "snackie:build:production"
             },
             "development": {
-              "buildTarget": "snakie:build:development"
+              "buildTarget": "snackie:build:development"
             }
           },
           "defaultConfiguration": "development"
