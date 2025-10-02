@@ -1,6 +1,7 @@
 import { NgClass } from '@angular/common';
-import { Component, forwardRef, input, model, OnInit } from '@angular/core';
+import { Component, forwardRef, inject, input, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { FoodService } from '../../../../services/foods';
 
 @Component({
   selector: 'app-fav',
@@ -16,22 +17,39 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ],
 })
 export class Fav implements ControlValueAccessor, OnInit {
-  initIsFav = input(false);
+  // 此元件有表單/非表單兩種使用情況
+  foodService = inject(FoodService);
   value = false;
+
+  // 區分情況
+  mode = input('form');
+
+  // 非表單時的 input
+  initIsFav = input(false);
+
+  // 表單
   private initializedFromForm = false;
   private onChange: (val: boolean) => void = () => {};
   private onTouched: () => void = () => {};
 
   ngOnInit() {
-    if (!this.initializedFromForm) {
-      this.value = this.initIsFav();
-    }
+    // 非表單，傳入初始值
+    if (!this.initializedFromForm) this.value = this.initIsFav();
   }
 
   toggle() {
     this.value = !this.value;
-    this.onChange(this.value);
-    this.onTouched();
+
+    // 表單
+    if (this.mode() === 'form') {
+      this.onChange(this.value);
+      this.onTouched();
+    }
+
+    // 非表單
+    if (this.mode() === 'standalone' && this.foodService.currId()) {
+      this.foodService.update(this.foodService.currId(), { isFav: this.value });
+    }
   }
 
   // ControlValueAccessor 方法

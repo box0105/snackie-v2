@@ -14,6 +14,13 @@
         [(ngModel)]="this.foodService.searchKeyword"
         (ngModelChange)="foodService.search()"
       />
+
+      @if (foodService.searchKeyword()) {
+      <button class="btn-clear" type="button" (click)="foodService.searchKeyword.set('')">
+        ✕
+      </button>
+      }
+
       <button class="btn btn-search">
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
@@ -22,9 +29,10 @@
 
   <!-- food cards -->
   <div class="foods-cards row row-cols-2 justify-content-between gx-2 gy-3">
-    @for (food of foodService.filterFoods(); track $index) {
+    @for (food of foodService.foods()| filterFoods :
+    foodService.searchKeyword(); track $index) {
     <div class="col">
-      <div class="dash-card card h-100 shadow-sm d-flex text-center">
+      <div class="dash-card card shadow-sm d-flex text-center">
         <app-toggle-btn [(isPicked)]="food.isPicked"></app-toggle-btn>
         <a [routerLink]="['/foods', food.id, 'edit']">
           <img

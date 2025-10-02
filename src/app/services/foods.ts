@@ -7,7 +7,6 @@ import { MOCK_FOODS } from '../mock/food.mock';
 })
 export class FoodService {
   foods = signal<Food[]>(MOCK_FOODS);
-  filterFoods = signal(this.foods());
   currId = signal<number>(1);
   searchKeyword = signal('');
 
@@ -20,6 +19,7 @@ export class FoodService {
     this.currId.set(id);
   }
 
+  // 從清單中的食物，挑選一個
   draw() {
     const pickList = this.foods().filter((food) => food.isPicked);
     if (pickList.length === 0) {
@@ -43,10 +43,6 @@ export class FoodService {
   search() {
     const key = this.searchKeyword().trim().toLowerCase();
     if (!key) this.reset();
-
-    this.filterFoods.set(
-      this.foods().filter((f) => f.name.toLowerCase().includes(key))
-    );
   }
 
   reset() {

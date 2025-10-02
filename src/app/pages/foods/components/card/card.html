@@ -15,20 +15,29 @@
       title="水分"
       [initValue]="this.FoodService.currFood?.hydrationRating ?? 5"
       iconClass="fa-droplet wetProp"
+      mode="standalone"
+      name="hydrationRating"
     ></app-prop>
 
     <app-prop
       title="飽食度"
       [initValue]="this.FoodService.currFood?.satietyRating ?? 5"
       iconClass="fa-pizza-slice meatProp"
+      mode="standalone"
+      name="satietyRating"
     ></app-prop>
 
     <app-prop
       title="價錢"
       [initValue]="this.FoodService.currFood?.priceRating ?? 5"
       iconClass="fa-sack-dollar moneyProp"
+      mode="standalone"
+      name="priceRating"
     ></app-prop>
   </div>
 
-  <app-fav [initIsFav]="this.FoodService.currFood?.isFav ?? false"></app-fav>
+  <app-fav
+    [initIsFav]="this.FoodService.currFood?.isFav ?? false"
+    mode="standalone"
+  ></app-fav>
 </div>
