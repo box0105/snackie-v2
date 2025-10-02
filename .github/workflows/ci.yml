@@ -37,7 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist/snackie
+          path: ./dist/snackie/browser
   deploy:
     environment:
       name: github-pages
