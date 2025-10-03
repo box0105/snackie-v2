@@ -16,8 +16,8 @@
       <!-- img preview -->
       <img
         [src]="previewUrl ?? (applyForm.get('img')?.value
-          ? `/images/${applyForm.get('img')?.value}` 
-          : '/images/default.jpg')"
+          ? `./images/${applyForm.get('img')?.value}` 
+          : './images/default.jpg')"
         alt="menu cover"
         class="food-img"
       />

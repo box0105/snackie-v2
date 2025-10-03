@@ -1,16 +1,22 @@
+# workflow name
 name: Deploy Angular to GitHub Pages
 
+# trigger when push main
 on:
   push:
     branches:
-      - main   # 每次 push main 分支就自動部署
+      - main
 
+# 權限
 permissions:
+  # 可讀 repo
   contents: read
+  # 可寫入 Github pages
   pages: write
   id-token: write
 
 jobs:
+  # 使用 GitHub 提供的最新 Ubuntu 環境跑 job : build
   build:
     runs-on: ubuntu-latest
     steps:
@@ -20,7 +26,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20   # 改成你 Angular 專案需要的 Node 版本
+          node-version: 20 # 改成你 Angular 專案需要的 Node 版本
 
       - name: Install dependencies
         run: npm install
@@ -31,7 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist/snackie
+          path: ./dist/snackie/browser
   deploy:
     environment:
       name: github-pages
