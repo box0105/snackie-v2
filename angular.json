@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/snackie",
+            "baseHref": "/snackie-v2/",
+            "deployUrl": "/snackie-v2/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
