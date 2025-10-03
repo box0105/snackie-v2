@@ -1,6 +1,6 @@
 .topbar {
   background-color: var(--dark-color);
-  height: 80px;
+  height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
