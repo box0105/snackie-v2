@@ -1,21 +1,19 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 65px);
-  padding-bottom: 0;
-  overflow: hidden;
+.foods-cards {
+  margin-top: 8.5rem;
+  // overflow-y: auto;
+  // overflow-x: visible;
 
-  .foods-cards {
-    flex: 0 1 auto;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding-inline: 5px;
-    padding-bottom: 4rem;
+  // &::-webkit-scrollbar {
+  //   display: none; /* Chrome, Safari */
+  // }
+}
 
-    &::-webkit-scrollbar {
-      display: none; /* Chrome, Safari */
-    }
-  }
+.panels {
+  position: fixed;
+  padding: 2rem;
+  z-index: 11;
+  width: 100%;
+  background-color: var(--bg-color);
 }
 
 .btn {
