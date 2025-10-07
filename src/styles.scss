@@ -15,6 +15,7 @@
   // bootstrap
   --bs-secondary-color: #aaa;
   // component set
+  --layout-padding: 1.5rem;
   --header-height: 5rem;
   --nav-height: 4.0625rem;
 }
@@ -52,6 +53,7 @@ body {
   background: var(--main-color);
   padding: 0.625rem 1.25rem;
   font-weight: 700;
+  color: black;
 
   &:hover,
   &:active {
@@ -96,6 +98,5 @@ a {
 }
 
 main {
-  // min-height: calc(100vh - 80px);
-  padding: 2rem;
+  padding: var(--layout-padding);
 }

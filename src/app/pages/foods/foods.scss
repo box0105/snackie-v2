@@ -10,7 +10,7 @@
 
 .panels {
   position: fixed;
-  padding: 2rem;
+  padding: var(--layout-padding);;
   z-index: 11;
   width: 100%;
   background-color: var(--bg-color);
@@ -92,7 +92,7 @@
 }
 
 .card {
-  border-color: var(--black-color);
+  border-color: var(--dark-color);
   background-color: var(--sub-color);
   padding: 0.4rem 0.4rem 0rem 0.4rem;
   border-radius: 1.5rem;
